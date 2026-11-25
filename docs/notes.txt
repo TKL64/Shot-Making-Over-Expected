@@ -10,3 +10,9 @@ ayant des données de rotations invalides. pour le reste, on parle de tirs à pl
 que des heaves en fin de période à cause de la nouvelle règle sur ces tirs (les tirs de 36 pi ou + en fin de quart ratés
 ne sont pas comptabilisés). les 1511 tirs retirés représentent environ 0.69% des tirs totaux, signifiant que 217 649 tirs
 demeurent.
+
+lors de la première exécution de creer_variables.py, j'ai remarqué qu'il y avait des tirs dont l'angle était entre 
+-176.5 et 180 degrés ces valeurs viennent des tirs pris derrière le panier (LOC_Y < 0). Juste derrière le panier, l’angle
+saute de −180° à +180°, alors que ces deux tirs sont pratiquement au même endroit. Le modèle les verrait comme deux tirs opposés.
+La solution est de prendre la valeur absolue de l’angle. Le côté gauche et le côté droit deviennent équivalents(0° à 180°),
+ce qui a du sens pour un modèle de joueur moyen, et le saut disparaît.
