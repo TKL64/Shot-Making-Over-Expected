@@ -3,4 +3,10 @@ NOTES:
 lors du diagnostique des données receuillies sur les rotations, j'ai trouvé que 8 matchs sur 1230
 présentent des données de rotation incohérentes (durées négatives, joueurs manquants, totaux d'équipe différent de
 5 x la durée du match). Leurs 1442 tirs (0.66%) ont été retirés. Pour les autres match, les minutes reconstruites
-correspondent aux minutes officielle à 1 minute près dans 99.7& des cas. 
+correspondent aux minutes officielle à 1 minute près dans 99.7& des cas.
+
+lors de l'éxécution de nettoyer_tirs.py, 1511 tirs ont été retirés. pour 1442 d'entre-eux, ils proviennent de matchs 
+ayant des données de rotations invalides. pour le reste, on parle de tirs à plus de 40 pi ou de l'arrière-terrain ainsi
+que des heaves en fin de période à cause de la nouvelle règle sur ces tirs (les tirs de 36 pi ou + en fin de quart ratés
+ne sont pas comptabilisés). les 1511 tirs retirés représentent environ 0.69% des tirs totaux, signifiant que 217 649 tirs
+demeurent.
