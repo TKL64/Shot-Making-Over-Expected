@@ -16,3 +16,6 @@ lors de la première exécution de creer_variables.py, j'ai remarqué qu'il y av
 saute de −180° à +180°, alors que ces deux tirs sont pratiquement au même endroit. Le modèle les verrait comme deux tirs opposés.
 La solution est de prendre la valeur absolue de l’angle. Le côté gauche et le côté droit deviennent équivalents(0° à 180°),
 ce qui a du sens pour un modèle de joueur moyen, et le saut disparaît.
+
+lors de l'exécution du modèle random forest en mode rapide, j'ai remarqué que la fatigue pourrait potentiellement biaiser le
+modèle, surtout les minutes jouées avant le tir, puisque ce sont les joueurs étoile qui jouent beaucoup de minutes typiquement.
